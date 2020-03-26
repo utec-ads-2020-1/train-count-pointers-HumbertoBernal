@@ -38,17 +38,16 @@ void count(int **p[]){
         }
     }
     
-    for (int m = 0; m <  con; ++m) {
-        repMin= o[m][1];
-        //Hallar el valorMIN
-        for (int l = m; l < con; ++l) {
-            if (o[l][1] < repMin) {
+    //debo hacer un bubble sort
+    for (int m = 0; m < con-1; ++m) {
+        for (int l = m; l < con-m-1; ++l) {
+            if (o[l][1] > o[l+1][1]) {
                 repMin = o[l][1];
                 valorMin = o[l][0];
-                o[l][1] = o[m][1];
-                o[l][0] = o[m][0];
-                o[m][1] = repMin;
-                o[m][0] = valorMin;
+                o[l][1] = o[l+1][1] ;
+                o[l][0] = o[l+1][0] ;
+                o[l+1][0] = valorMin;
+                o[l+1][1] = repMin;
             }
         }
     }
