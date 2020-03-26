@@ -37,15 +37,7 @@ void count(int **p[]){
             }
         }
     }
-    for (int k = 0; k < con ; ++k) {
-        if (o[k][0] == 0){
-            continue;
-        }else{
-            cout << "\n" << o[k][0] << " " << o[k][1];
-        }
-    }
-    cout << "\n";
-
+    
     for (int m = 0; m <  con; ++m) {
         repMin= o[m][1];
         //Hallar el valorMIN
